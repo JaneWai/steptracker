@@ -1,0 +1,36 @@
+.step-chart {
+  margin-top: 20px;
+}
+
+.chart-container {
+  height: 300px;
+  position: relative;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+.goal-met {
+  background-color: rgba(76, 175, 80, 0.7);
+}
+
+.goal-not-met {
+  background-color: rgba(33, 150, 243, 0.7);
+}

@@ -1,0 +1,35 @@
+.dashboard h1 {
+  margin-bottom: 20px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.dashboard-main, .dashboard-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quick-tips {
+  padding: 20px;
+}
+
+.tips-list {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.tips-list li {
+  margin-bottom: 10px;
+  color: var(--dark-gray);
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

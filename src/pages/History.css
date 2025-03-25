@@ -1,0 +1,102 @@
+.history h1 {
+  margin-bottom: 20px;
+}
+
+.filter-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-controls label {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.filter-controls select {
+  width: 200px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.history-item.goal-met {
+  border-left: 4px solid var(--success-color);
+}
+
+.history-item.goal-missed {
+  border-left: 4px solid var(--error-color);
+}
+
+.history-date {
+  font-weight: 500;
+}
+
+.history-steps {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.history-goal {
+  color: var(--dark-gray);
+}
+
+.history-status {
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.goal-met .history-status {
+  color: var(--success-color);
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.goal-missed .history-status {
+  color: var(--error-color);
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .history-item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+  
+  .history-status {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+  
+  .history-goal {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}

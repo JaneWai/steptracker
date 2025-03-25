@@ -1,0 +1,123 @@
+.settings h1 {
+  margin-bottom: 20px;
+}
+
+.settings-section {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.settings-section h2 {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-info h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+}
+
+.setting-info p {
+  margin: 0;
+  color: var(--dark-gray);
+  font-size: 14px;
+}
+
+.setting-control {
+  min-width: 120px;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--light-gray);
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: var(--primary-color);
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+.export-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-danger {
+  background-color: var(--error-color);
+}
+
+.btn-danger:hover {
+  background-color: #d32f2f;
+}
+
+.about-info {
+  padding: 10px 0;
+}
+
+.about-info p {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .setting-control {
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .export-controls {
+    flex-direction: column;
+  }
+}
